@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Details">
+
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/layout_border"
+        android:elevation="5dp"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Registration Details"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/welcomeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:text="Welcome to MJU Co, Michael James Urian"
+            android:maxLines="2"
+            android:textAlignment="center"
+            android:textColor="@color/light_gray"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/email"/>
+            <TextView
+                android:id="@+id/email_dtls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="17sp"
+                android:layout_marginStart="15dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/name"/>
+            <TextView
+                android:id="@+id/name_dtls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="17sp"
+                android:layout_marginStart="15dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/password"/>
+            <TextView
+                android:id="@+id/pass_dtls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Passwword"
+                android:textSize="17sp"
+                android:layout_marginStart="15dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <Button
+
+                android:id="@+id/gbButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Get Back"
+                android:layout_margin="5dp"
+                app:backgroundTint="@color/blue"
+                android:background="@drawable/button_corner"
+                android:textColor="@color/white"/>
+            <Button
+
+                android:id="@+id/confirmButton"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Confirm"
+                app:backgroundTint="@color/blue"
+                android:background="@drawable/button_corner"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
