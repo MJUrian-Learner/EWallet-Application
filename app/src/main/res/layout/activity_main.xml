@@ -18,7 +18,7 @@
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            app:srcCompat="@drawable/Logo" />
+            app:srcCompat="@drawable/logo" />
 
         <EditText
             android:id="@+id/emailText"
