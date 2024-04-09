@@ -24,6 +24,7 @@
         <EditText
             android:id="@+id/emailText"
             android:layout_width="match_parent"
+            android:maxWidth="450dp"
             android:layout_height="50dp"
             android:background="@drawable/edit_text_border"
             android:drawableStart="@drawable/email"
@@ -43,6 +44,7 @@
             android:id="@+id/passText"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:maxWidth="450dp"
             android:background="@drawable/edit_text_border"
             android:drawableStart="@drawable/password"
             android:drawablePadding="12dp"
@@ -70,16 +72,15 @@
             android:id="@+id/login_btn"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_corner"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:textAllCaps="false"
-            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
             android:letterSpacing="0.1"
-            app:backgroundTint="@color/blue"
-            android:text="Log In" />
+            android:text="Log In"
+            android:textColor="@color/white"
+            android:background="@drawable/button_corner"/>
 
 
 
@@ -95,7 +96,6 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:letterSpacing="0.1"
-            app:backgroundTint="@color/blue"
             android:text="Register" />
 
 
