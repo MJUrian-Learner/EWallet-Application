@@ -2,7 +2,10 @@ package com.example.ewalletapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -27,5 +30,14 @@ public class MainMenu extends AppCompatActivity {
         slideModels.add(new SlideModel(R.drawable.img_slide_five, ScaleTypes.FIT));
 
         imageSlider.setImageList(slideModels, ScaleTypes.FIT);
+
+        ImageView backBtnImg = findViewById(R.id.back_button);
+        backBtnImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenu.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

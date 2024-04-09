@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,8 +24,6 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<String> login_db = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+
+        Intent intent = getIntent();
+        ArrayList<String> dtls_lst = getIntent().getStringArrayListExtra(Details.EXTRA_MESSAGE);
 
         Button regBtn = findViewById(R.id.reg_btn);
         regBtn.setOnClickListener(new View.OnClickListener() {
@@ -50,8 +52,17 @@ public class MainActivity extends AppCompatActivity {
         logBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainMenu.class);
-                startActivity(intent);
+
+                EditText emailTxt = findViewById(R.id.emailText);
+                EditText passTxt = findViewById(R.id.passText);
+
+                String email = emailTxt.getText().toString();
+                String pass = passTxt.getText().toString();
+
+                if (dtls_lst.contains(email) && dtls_lst.contains((pass))) {
+                    Intent intent = new Intent(MainActivity.this, MainMenu.class);
+                    startActivity(intent);
+                }
             }
         });
     }

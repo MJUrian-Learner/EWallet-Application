@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Register extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.registration.MESSAGE";
+    public static final String EXTRA_MESSAGE = "com.example.ewalletapplication.MESSAGE";
     String email, fname, lname, pass, cpass;
 
     @Override

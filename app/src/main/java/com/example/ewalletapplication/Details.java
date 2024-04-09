@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 public class Details extends AppCompatActivity {
 
+    public static final String EXTRA_MESSAGE = "com.example.ewalletapplication.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,11 +51,21 @@ public class Details extends AppCompatActivity {
         TextView pass_dtls = findViewById(R.id.pass_dtls);
         pass_dtls.setText(dtls_lst.get(3));
 
-        Button submitBtn = findViewById(R.id.gbButton);
-        submitBtn.setOnClickListener(new View.OnClickListener() {
+        Button getBackBtn = findViewById(R.id.gbButton);
+        getBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Details.this, Register.class);
+                startActivity(intent);
+            }
+        });
+
+        Button confirmBtn = findViewById(R.id.confirmButton);
+        confirmBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Details.this, MainActivity.class);
+                intent.putStringArrayListExtra(EXTRA_MESSAGE, dtls_lst);
                 startActivity(intent);
             }
         });
